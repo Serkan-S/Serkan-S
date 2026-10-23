@@ -25,7 +25,7 @@ jobs:
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
 
-      - name: Diller ve alışkanlıklar
+      - name: Diller
         uses: lowlighter/metrics@latest
         with:
           filename: metrics.languages.svg
@@ -40,7 +40,3 @@ jobs:
           plugin_languages_details: percentage, bytes-size
           plugin_languages_limit: 8
           plugin_languages_indepth: no
-          plugin_habits: yes
-          plugin_habits_charts: yes
-          plugin_habits_days: 30
-          plugin_habits_from: 200

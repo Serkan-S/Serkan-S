@@ -17,7 +17,7 @@
   <img src="https://raw.githubusercontent.com/Serkan-S/Serkan-S/main/metrics.general.svg" alt="GitHub metrikleri" />
 </p>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Serkan-S/Serkan-S/main/metrics.languages.svg" alt="Dil dağılımı ve kodlama alışkanlıkları" />
+  <img src="https://raw.githubusercontent.com/Serkan-S/Serkan-S/main/metrics.languages.svg" alt="Dil dağılımı" />
 </p>
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=Serkan-S&theme=tokyonight&hide_border=true&locale=tr" />
