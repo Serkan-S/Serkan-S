@@ -1,0 +1,46 @@
+name: Metrikler
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Genel metrikler
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.general.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Serkan-S
+          template: classic
+          base: header, activity, community, repositories, metadata
+          repositories_affiliations: owner, collaborator, organization_member
+          config_timezone: Europe/Istanbul
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+
+      - name: Diller ve alışkanlıklar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.languages.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Serkan-S
+          template: classic
+          base: ""
+          repositories_affiliations: owner, collaborator, organization_member
+          config_timezone: Europe/Istanbul
+          plugin_languages: yes
+          plugin_languages_sections: most-used, recently-used
+          plugin_languages_details: percentage, bytes-size
+          plugin_languages_limit: 8
+          plugin_languages_indepth: no
+          plugin_habits: yes
+          plugin_habits_charts: yes
+          plugin_habits_days: 30
+          plugin_habits_from: 200
